@@ -2,7 +2,17 @@
 name = "utf-15"
 version = "0.1.0"
 edition = "2021"
+authors = ["Ken Hoover"]
+repository = "https://github.com/khoover/utf15"
+description = "A utility for encoding/decoding arbitrary binary data into/from UTF-16 compatible code units."
+keywords = ["encoding", "decoding", "binary", "utf16", "utf15"]
+categories = ["encoding", "compression"]
+license = "MIT OR Apache-2.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+
+[dev-dependencies]
+criterion = "0.3.5"
+proptest = "1.0.0"
