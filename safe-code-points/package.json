@@ -1,0 +1,8 @@
+{
+    "name": "print-safe-ranges",
+    "main": "print-safe-ranges.js",
+    "type": "module",
+    "dependencies": {
+        "safe-code-point": "file:safe-code-point"
+    }
+}
