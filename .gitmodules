@@ -1,0 +1,3 @@
+[submodule "safe-code-points/safe-code-point"]
+	path = safe-code-points/safe-code-point
+	url = git@github.com:qntm/safe-code-point.git
