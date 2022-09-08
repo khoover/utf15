@@ -38,13 +38,13 @@ console.log((1 << 15), ' vs ', ourRanges.reduce((acc, x) => {
 }, 0));
 
 console.log(ourRanges.sort((a, b) => {
-    return a.start - b.start;
+    return b.len - a.len;
 }));
 
-let declStr = `const BASE_START_END_TUPLES: [(u16, u16, u16); ${ourRanges.length}] = [(0, ${ourRanges[0].start}, ${ourRanges[0].start + ourRanges[0].len})`;
+let declStr = `const BASE_START_LEN_TUPLES: [(u16, u16, u16); ${ourRanges.length}] = [(0, ${ourRanges[0].start}, ${ourRanges[0].len})`;
 let u15Base = ourRanges[0].len;
 for (const o of ourRanges.slice(1)) {
-    declStr += `, (${u15Base}, ${o.start}, ${o.start + o.len})`;
+    declStr += `, (${u15Base}, ${o.start}, ${o.len})`;
     u15Base += o.len;
 }
 declStr += '];';
